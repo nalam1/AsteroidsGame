@@ -2,9 +2,9 @@ SpaceShip s = new SpaceShip();//your variable declarations here
 ArrayList <Asteroid> ast = new ArrayList <Asteroid>();
 ArrayList <Bullet> bang = new ArrayList <Bullet>();
 Star[] ss = new Star[100];
-boolean g = false;
-boolean f = false;
-boolean h = false;
+boolean a = false;
+boolean d = false;
+boolean w = false;
 public void setup() 
 {
   size(800,800);
@@ -220,17 +220,17 @@ public void keyPressed()
 }
 public void keyReleased()
 {
-  if(key=='f')
+  if(key=='a')
   {
     f = false;
   }
-  else if(key=='h')
+  else if(key=='d')
   {
     h = false;
   }
-  else if(key=='g')
+  else if(key=='w')
   {
-    g = false;
+    w = false;
   }
 }
 class Star
