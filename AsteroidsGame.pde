@@ -2,9 +2,9 @@ SpaceShip s = new SpaceShip();//your variable declarations here
 ArrayList <Asteroid> ast = new ArrayList <Asteroid>();
 ArrayList <Bullet> bang = new ArrayList <Bullet>();
 Star[] ss = new Star[100];
-boolean g = false;
-boolean f = false;
-boolean h = false;
+boolean w = false;
+boolean a = false;
+boolean d = false;
 public void setup() 
 {
   size(800,800);
@@ -64,16 +64,16 @@ public void draw()
     s.accelerate(.15);
     s.rotate(7);
   }
-  else if(g == true)
+  else if(w == true)
   {
     s.accelerate(.15
       );
   }
-  else if(f == true)
+  else if(a == true)
   {
     s.rotate(-7);
   }
-  else if(h == true)
+  else if(d == true)
   {
     s.rotate(7);
   }
