@@ -7,7 +7,7 @@ boolean f = false;
 boolean h = false;
 public void setup() 
 {
-  size(700,700);
+  size(800,800);
   for(int i=0;i<ss.length;i++)
   {
     ss[i] = new Star();
@@ -108,8 +108,8 @@ class SpaceShip extends Floater
     yCorners[4] = -7;
     xCorners[5] = 5;
     yCorners[5] = -7;
-    myCenterX = 350;
-    myCenterY = 350;
+    myCenterX = 400;
+    myCenterY = 400;
     myPointDirection = 0;
   }
 }
@@ -194,8 +194,8 @@ public void keyPressed()
 {
   if(key=='j')//hyperspace
   {
-    s.setX((int)(Math.random()*700));
-    s.setY((int)(Math.random()*700));
+    s.setX((int)(Math.random()*800));
+    s.setY((int)(Math.random()*800));
     s.setPointDirection((int)(Math.random()*360));
     s.setDirectionX(0);
     s.setDirectionY(0);
@@ -238,8 +238,8 @@ class Star
   int myX, myY;
   Star()
   {
-    myX = (int)(Math.random()*700);
-    myY = (int)(Math.random()*700);
+    myX = (int)(Math.random()*800);
+    myY = (int)(Math.random()*800);
   }
   void show()
   {
