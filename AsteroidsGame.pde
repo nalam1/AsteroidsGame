@@ -214,7 +214,7 @@ public void keyPressed()
   }
   if(key ==' ')
   {
-    if(bang.size()<10)
+    if(bang.size()<5)
       bang.add(new Bullet(s));
   }
 }
