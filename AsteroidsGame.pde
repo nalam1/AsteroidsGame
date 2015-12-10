@@ -263,18 +263,18 @@ class Asteroid extends Floater
     corners = 6;
     xCorners = new int[corners];
     yCorners = new int[corners];
-    xCorners[0] = -12;
-    yCorners[0] = 24;
-    xCorners[1] = 12;
-    yCorners[1] = 24;
-    xCorners[2] = 24;
-    yCorners[2] = 0;
-    xCorners[3] = 12;
-    yCorners[3] = -24;
-    xCorners[4] = -12;
-    yCorners[4] = -24;
-    xCorners[5] = -24;
-    yCorners[5] = 0;
+    xCorners[0] = 12;
+    yCorners[0] = 0;
+    xCorners[1] = 5;
+    yCorners[1] = 7;
+    xCorners[2] = -7;
+    yCorners[2] = 7;
+    xCorners[3] = 0;
+    yCorners[3] = 0;
+    xCorners[4] = -7;
+    yCorners[4] = -7;
+    xCorners[5] = 5;
+    yCorners[5] = -7;
     if(dums==0)
     {
       myCenterX = 1;
