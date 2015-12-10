@@ -1,5 +1,5 @@
 SpaceShip s = new SpaceShip();//your variable declarations here
-ArrayList <Asteroid> sss = new ArrayList <Asteroid>();
+ArrayList <Asteroid> ast = new ArrayList <Asteroid>();
 ArrayList <Bullet> bang = new ArrayList <Bullet>();
 Star[] ss = new Star[100];
 boolean g = false;
@@ -14,7 +14,7 @@ public void setup()
   }
   for(int i=0;i<10;i++)
   {
-    sss.add(i, new Asteroid());
+    ast.add(i, new Asteroid());
   }
 }
 public void draw() 
@@ -24,13 +24,13 @@ public void draw()
   {
     ss[i].show();
   }
-  for(int i=0;i<sss.size();i++)
+  for(int i=0;i<ast.size();i++)
   {
-    sss.get(i).show();
-    sss.get(i).move();
-    //if(dist((float)sss.get(i).getX()+20, (float)sss.get(i).getY()+20, (float)s.getX(), (float)s.getY())<20 || dist((float)sss.get(i).getX()-20, (float)sss.get(i).getY()-20, (float)s.getX(), (float)s.getY())<20 || dist((float)sss.get(i).getX()+20, (float)sss.get(i).getY()-20, (float)s.getX(), (float)s.getY())<20 || dist((float)sss.get(i).getX()-20, (float)sss.get(i).getY()+20, (float)s.getX(), (float)s.getY())<20)
+    ast.get(i).show();
+    ast.get(i).move();
+    //if(dist((float)ast.get(i).getX()+20, (float)ast.get(i).getY()+20, (float)s.getX(), (float)s.getY())<20 || dist((float)ast.get(i).getX()-20, (float)ast.get(i).getY()-20, (float)s.getX(), (float)s.getY())<20 || dist((float)ast.get(i).getX()+20, (float)ast.get(i).getY()-20, (float)s.getX(), (float)s.getY())<20 || dist((float)ast.get(i).getX()-20, (float)ast.get(i).getY()+20, (float)s.getX(), (float)s.getY())<20)
     //{
-    //  sss.remove(i);
+    //  ast.remove(i);
     //}
   }
   for(int i=0;i<bang.size();i++)
@@ -42,11 +42,11 @@ public void draw()
       bang.remove(i);
       break;
     }
-    for(int j=0;j<sss.size();j++)
+    for(int j=0;j<ast.size();j++)
     {
-      if(dist((float)sss.get(j).getX()+20, (float)sss.get(j).getY()+20, (float)bang.get(i).getX(), (float)bang.get(i).getY())<20 || dist((float)sss.get(j).getX()-20, (float)sss.get(j).getY()-20, (float)bang.get(i).getX(), (float)bang.get(i).getY())<20 || dist((float)sss.get(j).getX()+20, (float)sss.get(j).getY()-20, (float)bang.get(i).getX(), (float)bang.get(i).getY())<20 || dist((float)sss.get(j).getX()-20, (float)sss.get(j).getY()+20, (float)bang.get(i).getX(), (float)bang.get(i).getY())<20)
+      if(dist((float)ast.get(j).getX()+20, (float)ast.get(j).getY()+20, (float)bang.get(i).getX(), (float)bang.get(i).getY())<20 || dist((float)ast.get(j).getX()-20, (float)ast.get(j).getY()-20, (float)bang.get(i).getX(), (float)bang.get(i).getY())<20 || dist((float)ast.get(j).getX()+20, (float)ast.get(j).getY()-20, (float)bang.get(i).getX(), (float)bang.get(i).getY())<20 || dist((float)ast.get(j).getX()-20, (float)ast.get(j).getY()+20, (float)bang.get(i).getX(), (float)bang.get(i).getY())<20)
       {
-        sss.remove(j);
+        ast.remove(j);
         bang.remove(i);
         break;
       }
