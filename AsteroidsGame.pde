@@ -54,12 +54,12 @@ public void draw()
   }
   s.show();
   s.move();
-  if(g == true && f == true)
+  if(w == true && a == true)
   {
     s.accelerate(.15);
     s.rotate(-7);
   }
-  else if(g==true&&h==true)
+  else if(w==true&&d==true)
   {
     s.accelerate(.15);
     s.rotate(7);
@@ -69,11 +69,11 @@ public void draw()
     s.accelerate(.15
       );
   }
-  else if(a == true)
+  else if(f == true)
   {
     s.rotate(-7);
   }
-  else if(d == true)
+  else if(h == true)
   {
     s.rotate(7);
   }
@@ -210,7 +210,7 @@ public void keyPressed()
   } 
   else if(key =='w')
   {
-    g = true;
+    w = true;
   }
   if(key ==' ')
   {
@@ -220,17 +220,17 @@ public void keyPressed()
 }
 public void keyReleased()
 {
-  if(key=='f')
+  if(key=='a')
   {
     f = false;
   }
-  else if(key=='h')
+  else if(key=='d')
   {
     h = false;
   }
-  else if(key=='g')
+  else if(key=='w')
   {
-    g = false;
+    w = false;
   }
 }
 class Star
@@ -357,7 +357,7 @@ class Bullet extends Floater
     //convert degrees to radians for sin and cos         
     double dRadians = myPointDirection*(Math.PI/180);                 
     beginShape();         
-    ellipse((float)myCenterX,(float)myCenterY,(float)10,(float)10);
+    ellipse((float)myCenterX,(float)myCenterY,(float)5,(float)5);
     endShape(CLOSE);  
   }
 }
