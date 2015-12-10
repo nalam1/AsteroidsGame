@@ -93,15 +93,21 @@ class SpaceShip extends Floater
   SpaceShip()
   { 
     myColor = 255;
-    corners = 3;
+    corners = 6;
     xCorners = new int[corners];
     yCorners = new int[corners];
-    xCorners[0] = -10;
-    yCorners[0] = -10;
-    xCorners[1] = 20;
-    yCorners[1] = 0;
-    xCorners[2] = -10;
-    yCorners[2] = 10;
+    xCorners[0] = 12;
+    yCorners[0] = 0;
+    xCorners[1] = 5;
+    yCorners[1] = 7;
+    xCorners[2] = -7;
+    yCorners[2] = 7;
+    xCorners[3] = 0;
+    yCorners[3] = 0;
+    xCorners[4] = -7;
+    yCorners[4] = -7;
+    xCorners[5] = 5;
+    yCorners[5] = -7;
     myCenterX = 350;
     myCenterY = 350;
     myPointDirection = 0;
