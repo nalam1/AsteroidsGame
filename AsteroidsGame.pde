@@ -1,13 +1,14 @@
+
 SpaceShip s = new SpaceShip();//your variable declarations here
 ArrayList <Asteroid> ast = new ArrayList <Asteroid>();
 ArrayList <Bullet> bang = new ArrayList <Bullet>();
 Star[] ss = new Star[100];
-boolean w = false;
-boolean a = false;
-boolean d = false;
+boolean g = false;
+boolean f = false;
+boolean h = false;
 public void setup() 
 {
-  size(800,800);
+  size(700,700);
   for(int i=0;i<ss.length;i++)
   {
     ss[i] = new Star();
@@ -54,17 +55,17 @@ public void draw()
   }
   s.show();
   s.move();
-  if(w == true && a == true)
+  if(g == true && f == true)
   {
     s.accelerate(.15);
     s.rotate(-7);
   }
-  else if(w==true&&d==true)
+  else if(g==true&&h==true)
   {
     s.accelerate(.15);
     s.rotate(7);
   }
-  else if(w == true)
+  else if(g == true)
   {
     s.accelerate(.15
       );
@@ -108,8 +109,8 @@ class SpaceShip extends Floater
     yCorners[4] = -7;
     xCorners[5] = 5;
     yCorners[5] = -7;
-    myCenterX = 400;
-    myCenterY = 400;
+    myCenterX = 350;
+    myCenterY = 350;
     myPointDirection = 0;
   }
 }
@@ -192,25 +193,25 @@ abstract class Floater //Do NOT modify the Floater class! Make changes in the Sp
 
 public void keyPressed()
 {
-  if(key=='h')//hyperspace
+  if(key=='j')//hyperspace
   {
-    s.setX((int)(Math.random()*800));
-    s.setY((int)(Math.random()*800));
+    s.setX((int)(Math.random()*700));
+    s.setY((int)(Math.random()*700));
     s.setPointDirection((int)(Math.random()*360));
     s.setDirectionX(0);
     s.setDirectionY(0);
   }
-  else if(key =='a')
+  else if(key =='f')
   {
     f = true;
   }
-  else if(key =='d')
+  else if(key =='h')
   {
     h = true; 
   } 
-  else if(key =='w')
+  else if(key =='g')
   {
-    w = true;
+    g = true;
   }
   if(key ==' ')
   {
@@ -220,17 +221,17 @@ public void keyPressed()
 }
 public void keyReleased()
 {
-  if(key=='a')
+  if(key=='f')
   {
     f = false;
   }
-  else if(key=='d')
+  else if(key=='h')
   {
     h = false;
   }
-  else if(key=='w')
+  else if(key=='g')
   {
-    w = false;
+    g = false;
   }
 }
 class Star
@@ -238,8 +239,8 @@ class Star
   int myX, myY;
   Star()
   {
-    myX = (int)(Math.random()*800);
-    myY = (int)(Math.random()*800);
+    myX = (int)(Math.random()*700);
+    myY = (int)(Math.random()*700);
   }
   void show()
   {
@@ -357,7 +358,7 @@ class Bullet extends Floater
     //convert degrees to radians for sin and cos         
     double dRadians = myPointDirection*(Math.PI/180);                 
     beginShape();         
-    ellipse((float)myCenterX,(float)myCenterY,(float)5,(float)5);
+    ellipse((float)myCenterX,(float)myCenterY,(float)10,(float)10);
     endShape(CLOSE);  
   }
 }
