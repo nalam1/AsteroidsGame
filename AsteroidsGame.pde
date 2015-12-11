@@ -3,7 +3,7 @@ SpaceShip s = new SpaceShip();//your variable declarations here
 ArrayList <Asteroid> ast = new ArrayList <Asteroid>();
 ArrayList <Bullet> bang = new ArrayList <Bullet>();
 Star[] ss = new Star[100];
-boolean g = false;
+boolean w = false;
 boolean f = false;
 boolean h = false;
 public void setup() 
@@ -55,26 +55,26 @@ public void draw()
   }
   s.show();
   s.move();
-  if(g == true && f == true)
+  if(w == true && a == true)
   {
     s.accelerate(.15);
     s.rotate(-7);
   }
-  else if(g==true&&h==true)
+  else if(w==true&&d==true)
   {
     s.accelerate(.15);
     s.rotate(7);
   }
-  else if(g == true)
+  else if(w == true)
   {
     s.accelerate(.15
       );
   }
-  else if(f == true)
+  else if(a == true)
   {
     s.rotate(-7);
   }
-  else if(h == true)
+  else if(d == true)
   {
     s.rotate(7);
   }
@@ -201,17 +201,17 @@ public void keyPressed()
     s.setDirectionX(0);
     s.setDirectionY(0);
   }
-  else if(key =='f')
+  else if(key =='a')
   {
-    f = true;
+    a = true;
   }
-  else if(key =='h')
+  else if(key =='d')
   {
-    h = true; 
+    d = true; 
   } 
-  else if(key =='g')
+  else if(key =='w')
   {
-    g = true;
+    w = true;
   }
   if(key ==' ')
   {
@@ -221,17 +221,17 @@ public void keyPressed()
 }
 public void keyReleased()
 {
-  if(key=='f')
+  if(key=='a')
   {
-    f = false;
+    a = false;
   }
-  else if(key=='h')
+  else if(key=='d')
   {
-    h = false;
+    d = false;
   }
-  else if(key=='g')
+  else if(key=='w')
   {
-    g = false;
+    w = false;
   }
 }
 class Star
