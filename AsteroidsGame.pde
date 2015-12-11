@@ -4,8 +4,8 @@ ArrayList <Asteroid> ast = new ArrayList <Asteroid>();
 ArrayList <Bullet> bang = new ArrayList <Bullet>();
 Star[] ss = new Star[100];
 boolean w = false;
-boolean f = false;
-boolean h = false;
+boolean a = false;
+boolean d = false;
 public void setup() 
 {
   size(700,700);
