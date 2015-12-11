@@ -8,7 +8,7 @@ boolean a = false;
 boolean d = false;
 public void setup() 
 {
-  size(700,700);
+  size(800,800);
   for(int i=0;i<ss.length;i++)
   {
     ss[i] = new Star();
@@ -195,9 +195,9 @@ public void keyPressed()
 {
   if(key=='j')//hyperspace
   {
-    s.setX((int)(Math.random()*700));
-    s.setY((int)(Math.random()*700));
-    s.setPointDirection((int)(Math.random()*360));
+    s.setX((int)(Math.random()*800));
+    s.setY((int)(Math.random()*800));
+    s.setPointDirection((int)(Math.random()*410));
     s.setDirectionX(0);
     s.setDirectionY(0);
   }
@@ -215,7 +215,7 @@ public void keyPressed()
   }
   if(key ==' ')
   {
-    if(bang.size()<5)
+    if(bang.size()<10000)
       bang.add(new Bullet(s));
   }
 }
@@ -239,13 +239,13 @@ class Star
   int myX, myY;
   Star()
   {
-    myX = (int)(Math.random()*700);
-    myY = (int)(Math.random()*700);
+    myX = (int)(Math.random()*800);
+    myY = (int)(Math.random()*800);
   }
   void show()
   {
-    fill(255,255,102);
-    ellipse(myX,myY,7,7);
+    fill(random(0,255),random(0,255),random(0,255));
+    ellipse(myX,myY,5,5);
   }
 }
 class Asteroid extends Floater
@@ -285,22 +285,22 @@ class Asteroid extends Floater
     if(dums==0)
     {
       myCenterX = 1;
-      myCenterY = (int)(Math.random()*699+1);
+      myCenterY = (int)(Math.random()*799+1);
     }
     else if(dums==1)
     {
-      myCenterX = (int)(Math.random()*699+1);
+      myCenterX = (int)(Math.random()*799+1);
       myCenterY = 1;
     }
     else if(dums==2)
     {
-      myCenterX = 699;
-      myCenterY = (int)(Math.random()*699+1);
+      myCenterX = 799;
+      myCenterY = (int)(Math.random()*799+1);
     }
     else if(dums==3)
     {
-      myCenterX = (int)(Math.random()*699+1);
-      myCenterY = 699;
+      myCenterX = (int)(Math.random()*799+1);
+      myCenterY = 799;
     }
   }
   public void move ()
@@ -346,7 +346,7 @@ class Bullet extends Floater
     myCenterX = s.myCenterX;
     myCenterY = s.myCenterY;
     myPointDirection = s.myPointDirection;
-    myColor = 200;
+    myColor = 255;
     double dRadians = myPointDirection*(Math.PI/180);
     myDirectionX = 5 * Math.cos(dRadians) + s.myDirectionX;
     myDirectionY = 5 * Math.sin(dRadians) + s.myDirectionY;
