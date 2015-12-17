@@ -109,8 +109,8 @@ class SpaceShip extends Floater
     yCorners[4] = -7;
     xCorners[5] = 5;
     yCorners[5] = -7;
-    myCenterX = 350;
-    myCenterY = 350;
+    myCenterX = 400;
+    myCenterY = 400;
     myPointDirection = 0;
   }
 }
