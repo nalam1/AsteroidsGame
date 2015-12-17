@@ -38,7 +38,7 @@ public void draw()
   {
     bang.get(i).show();
     bang.get(i).move();
-    if(bang.get(i).myCenterX<10 || bang.get(i).myCenterX>690 || bang.get(i).myCenterY<10 || bang.get(i).myCenterY>690)
+    if(bang.get(i).myCenterX<10 || bang.get(i).myCenterX>790 || bang.get(i).myCenterY<10 || bang.get(i).myCenterY>790)
     {
       bang.remove(i);
       break;
