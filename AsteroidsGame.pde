@@ -1,4 +1,4 @@
-
+//Welcome to the Galaxy.
 SpaceShip s = new SpaceShip();//your variable declarations here
 ArrayList <Asteroid> ast = new ArrayList <Asteroid>();
 ArrayList <Bullet> bang = new ArrayList <Bullet>();
