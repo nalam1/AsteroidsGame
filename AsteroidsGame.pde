@@ -193,7 +193,7 @@ abstract class Floater //Do NOT modify the Floater class! Make changes in the Sp
 
 public void keyPressed()
 {
-  if(key=='j')//hyperspace
+  if(key=='h')//hyperspace
   {
     s.setX((int)(Math.random()*800));
     s.setY((int)(Math.random()*800));
